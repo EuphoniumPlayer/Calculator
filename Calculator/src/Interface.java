@@ -4,8 +4,8 @@ public class Interface {
 	
 	static CalculatorControl math = new CalculatorControl();
 	static ConversionControl convert = new ConversionControl();
-	static CalculatorSetup setupcalc = new CalculatorSetup();
-	static ConversionSetup setupconvert = new ConversionSetup();
+	//static CalculatorSetup setupcalc = new CalculatorSetup();
+	//static ConversionSetup setupconvert = new ConversionSetup();
 	static var forgive = 0;
 	
 	public static void main(String[] args) {
@@ -18,12 +18,12 @@ public class Interface {
 			switch (user) {
 			case "Math", "math":
 				forgive = 1;
-				setupcalc.setupcalc();
+				//setupcalc.setupcalc();
 				math.begin();
 				break;
 			case "Convert", "convert", "conversion", "Conversion":
 				forgive = 1;
-				setupconvert.setupconvert();
+				//setupconvert.setupconvert();
 				convert.begin();
 				break;
 			default: 
