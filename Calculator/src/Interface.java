@@ -8,7 +8,7 @@ public class Interface {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		
-		System.out.println("What would you like to do?\n");
+		System.out.println("What would you like to do, math or conversion?\n");
 		String user = input.next();
 		
 		switch (user) {
@@ -16,7 +16,7 @@ public class Interface {
 		case "Math", "math":
 			math.begin();
 			break;
-		case "Convert", "convert":
+		case "Convert", "convert", "conversion", "Conversion":
 			convert.begin();
 			break;
 		default: 

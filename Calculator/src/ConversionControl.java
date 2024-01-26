@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class ConversionControl {
 	
-	MiKm mikm = new MiKm();
+	MiKl mikm = new MiKl();
 	CF cf = new CF();
 	static Scanner scanner = new Scanner(System.in);
 	

@@ -1,5 +1,5 @@
 
-public class MiKm extends ConversionSetup {
+public class MiKl extends ConversionSetup {
 	void start () {
 		System.out.println("\n1. Miles to Kilometers\n2. Kilometers to Miles");
 		order = scanner.nextInt();
