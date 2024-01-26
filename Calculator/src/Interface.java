@@ -27,7 +27,7 @@ public class Interface {
 				convert.begin();
 				break;
 			case "CHICKENFINGER":
-				System.out.println("\n\n\nEAT MORE CHICKEN\N\N\N");
+				System.out.println("\n\n\nEAT MORE CHICKEN\n\n\n");
 				forgive = 0;
 				break;
 			default: 
