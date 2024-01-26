@@ -26,6 +26,10 @@ public class Interface {
 				//setupconvert.setupconvert();
 				convert.begin();
 				break;
+			case "CHICKENFINGER":
+				System.out.println("\n\n\nEAT MORE CHICKEN\N\N\N");
+				forgive = 1;
+				break;
 			default: 
 				System.out.println("\nUnknown Command");
 				break;
