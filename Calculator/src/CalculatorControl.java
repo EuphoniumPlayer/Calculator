@@ -15,23 +15,30 @@ public class CalculatorControl {
 		while (forgive == 1) {
 			switch (choice) {
 			case 1:
+				forgive = 0;
 				System.out.println("Addition Selected\n");
 				add.run();
 				break;
 			case 2:
+				forgive = 0;
 				System.out.println("Subtraction Selected\n");
 				sub.run();
 				break;
 			case 3:
+				forgive = 0;
 				System.out.println("Multiplication Selected\n");
 				mul.run();
 				break;
 			case 4:
+				forgive = 0;
 				System.out.println("Division Selected\n");
 				div.run();
 				break;
 			default:
-				System.out.println("\n\nOperation does not exist, please try again. \n");
+				if (choice => 4) {
+					forgive = 1;
+					System.out.println("\n\nOperation does not exist, please try again. \n");
+				}
 				break;
 			}
 		}
