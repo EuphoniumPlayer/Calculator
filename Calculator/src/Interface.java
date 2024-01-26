@@ -28,7 +28,7 @@ public class Interface {
 				break;
 			case "CHICKENFINGER":
 				System.out.println("\n\n\nEAT MORE CHICKEN\N\N\N");
-				forgive = 1;
+				forgive = 0;
 				break;
 			default: 
 				System.out.println("\nUnknown Command");
