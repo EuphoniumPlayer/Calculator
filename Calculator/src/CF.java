@@ -1,7 +1,4 @@
 public class CF extends ConversionSetup {
-	
-	static var forgive = 1;
-	
 	void start () {	
 		System.out.println("\n1. Celsius to Fahrenheit\n2. Fahrenheit to Celsius");
 		order = scanner.nextInt();
