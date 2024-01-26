@@ -7,7 +7,7 @@ public class CalculatorControl {
 	Subtraction sub = new Subtraction();
 	Multiplication mul = new Multiplication();
 	Division div = new Division();
-	static var forgive = 1;
+	static double forgive = 1;
 	
 	void begin () {
 		System.out.println("What operation would you like to do?\n\n1. Addition\n2. Subtraction\n3. Multiplication\n4. Division\n");
@@ -35,10 +35,8 @@ public class CalculatorControl {
 				div.run();
 				break;
 			default:
-				if (choice => 4) {
 					forgive = 1;
 					System.out.println("\n\nOperation does not exist, please try again. \n");
-				}
 				break;
 			}
 		}

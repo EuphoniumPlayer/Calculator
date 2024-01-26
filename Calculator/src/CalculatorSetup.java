@@ -6,7 +6,7 @@ public class CalculatorSetup {
 	double y;
 	double z;
 
-	var forgive = 1;
+	double forgive = 1;
 	// cont means continue
 	String cont = "Y";
 	// rslt means result
