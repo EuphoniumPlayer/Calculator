@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class CalculatorSetup {
-	void setupcalc {
+	//void setupcalc {
 	double x;
 	double y;
 	double z;
@@ -12,5 +12,5 @@ public class CalculatorSetup {
 	// rslt means result
 	double rslt;
 	Scanner scanner = new Scanner(System.in);
-	}
+	//}
 }
