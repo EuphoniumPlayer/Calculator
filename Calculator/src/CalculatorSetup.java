@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class CalculatorSetup {
+	EasterEggs ee = new EasterEggs();
 	//void setupcalc {
 	double x;
 	double y;

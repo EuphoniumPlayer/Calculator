@@ -4,8 +4,6 @@ public class Interface {
 	
 	static CalculatorControl math = new CalculatorControl();
 	static ConversionControl convert = new ConversionControl();
-	//static CalculatorSetup setupcalc = new CalculatorSetup();
-	//static ConversionSetup setupconvert = new ConversionSetup();
 	static EasterEggs ee = new EasterEggs();
 	static double forgive = 1;
 	
@@ -18,19 +16,17 @@ public class Interface {
 				switch (user) {
 				case "Math", "math":
 					forgive = 0;
-					//setupcalc.setupcalc();
 					math.begin();
 					break;
 				case "Convert", "convert", "conversion", "Conversion":
 					forgive = 0;
-					//setupconvert.setupconvert();
 					convert.begin();
 					break;
 				case "CHICKENFINGER":
 					ee.cknfngr();
 					forgive = 1;
 					break;
-				case "dog", "DOG":
+				case "DOGS":
 					ee.woof();
 					forgive = 1;
 					break;
