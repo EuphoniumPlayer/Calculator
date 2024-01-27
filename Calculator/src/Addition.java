@@ -15,7 +15,6 @@ public class Addition extends CalculatorSetup {
 			cont = scanner.next();
 
 		}
-		
 		System.out.println("End: " + rslt);
 	}
 }

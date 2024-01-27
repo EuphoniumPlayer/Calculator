@@ -33,10 +33,8 @@ public class Interface {
 				default: 
 					System.out.println("\nUnknown Command");
 					break;
-				} //close off switch
-			} //close off while
-		}
-		
-	} //close off public static void main(String[] args)
-
-} //close off public class interface
+				} 
+			}
+		}	
+	}
+}

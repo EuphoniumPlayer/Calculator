@@ -19,8 +19,7 @@ public class CF extends ConversionSetup {
 			default:
 				System.out.println("Invalid command. Please choose a valid command. \n");
 				break;
-			} //close switch
-		} //close while loop
-	} //close void
-	
-} //close code
+			}
+		}
+	}	
+}

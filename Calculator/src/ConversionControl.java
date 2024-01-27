@@ -19,5 +19,5 @@ public class ConversionControl {
 			System.out.println("\nInvalid Command");
 			break;
 		}
-		}
+	}
 }
