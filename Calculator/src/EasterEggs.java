@@ -5,4 +5,7 @@ public class EasterEggs {
     void woof () {
         System.out.println("\n\n\nWOOF WOOF!\n\n\n");
     }
+    void dirty () {
+        System.out.println("\n\n\nGet your head out of the gutter\n\n\n");
+    }
 }

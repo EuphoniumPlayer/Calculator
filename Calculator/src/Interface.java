@@ -5,7 +5,7 @@ public class Interface {
 	static CalculatorControl math = new CalculatorControl();
 	static ConversionControl convert = new ConversionControl();
 	static EasterEggs ee = new EasterEggs();
-	static double forgive = 1;
+	static int forgive = 1;
 	
 	public static void main(String[] args) {
 		try (Scanner input = new Scanner(System.in)) {
@@ -28,6 +28,10 @@ public class Interface {
 					break;
 				case "DOGS":
 					ee.woof();
+					forgive = 1;
+					break;
+				case "69":
+					ee.dirty();
 					forgive = 1;
 					break;
 				default: 

@@ -7,7 +7,9 @@ public class CalculatorControl {
 	Subtraction sub = new Subtraction();
 	Multiplication mul = new Multiplication();
 	Division div = new Division();
-	static double forgive = 1;
+	static int forgive = 1;
+	static EasterEggs ee = new EasterEggs();
+	static int dirtymeter = 0;
 	
 	void begin () {
 		System.out.println("What operation would you like to do?\n\n1. Addition\n2. Subtraction\n3. Multiplication\n4. Division\n");
@@ -34,9 +36,24 @@ public class CalculatorControl {
 				System.out.println("Division Selected\n");
 				div.run();
 				break;
+			case 69:
+				ee.dirty();
+				if (dirtymeter > 4) {
+					System.out.println("STAHP");
+					dirtymeter = dirtymeter + 1;
+				} else if (dirtymeter > 1) {
+					System.out.println("You're dirty.");
+					dirtymeter = dirtymeter + 1;
+				} else {
+					System.out.println("Now, try again. 1, 2, 3, or 4 (NOT 69)");
+					dirtymeter = dirtymeter + 1;
+				}
+				forgive = 1;
+				break;
 			default:
 					forgive = 1;
 					System.out.println("\n\nOperation does not exist, please try again. \n");
+					
 				break;
 			}
 		}

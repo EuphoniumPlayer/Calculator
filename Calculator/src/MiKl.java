@@ -1,4 +1,3 @@
-
 public class MiKl extends ConversionSetup {
 	void start () {
 		System.out.println("\n1. Miles to Kilometers\n2. Kilometers to Miles");
@@ -18,6 +17,9 @@ public class MiKl extends ConversionSetup {
 				input = scanner.nextDouble();
 				rslt = ((input * 5) / 8);
 				System.out.println(rslt + " Miles");
+				break;
+			case 69:
+				
 				break;
 			default:
 				forgive = 1;
