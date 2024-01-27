@@ -1,8 +1,8 @@
 public class CF extends ConversionSetup {
 	void start () {	
 		System.out.println("\n1. Celsius to Fahrenheit\n2. Fahrenheit to Celsius");
-		order = scanner.nextInt();
 		while (forgive == 1) {	
+			order = scanner.nextInt();
 			switch (order) {
 			case 1:
 				System.out.println("Input Celsius");

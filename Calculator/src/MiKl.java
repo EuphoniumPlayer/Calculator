@@ -2,8 +2,8 @@
 public class MiKl extends ConversionSetup {
 	void start () {
 		System.out.println("\n1. Miles to Kilometers\n2. Kilometers to Miles");
-		order = scanner.nextInt();
-		while (forgive == 1) {
+		while (forgive == 1) {	
+			order = scanner.nextInt();
 			switch (order) {
 			case 1:
 				forgive = 0;

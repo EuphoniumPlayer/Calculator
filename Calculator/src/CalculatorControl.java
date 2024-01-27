@@ -11,8 +11,8 @@ public class CalculatorControl {
 	
 	void begin () {
 		System.out.println("What operation would you like to do?\n\n1. Addition\n2. Subtraction\n3. Multiplication\n4. Division\n");
-		int choice = scanner.nextInt();
 		while (forgive == 1) {
+			int choice = scanner.nextInt();
 			switch (choice) {
 			case 1:
 				forgive = 0;
