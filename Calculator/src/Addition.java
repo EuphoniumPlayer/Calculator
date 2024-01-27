@@ -13,7 +13,6 @@ public class Addition extends CalculatorSetup {
 			rslt = rslt + z;
 			System.out.println("Continue?\n");
 			cont = scanner.next();
-
 		}
 		
 		System.out.println("End: " + rslt);
