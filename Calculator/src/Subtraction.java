@@ -5,10 +5,10 @@ public class Subtraction extends CalculatorSetup {
 		System.out.println("Input:\n");
 		y = scanner.nextDouble();
 		rslt = x - y;
-		System.out.println("Continue? Use a SINGLE capitol Y or N\n");
+		System.out.println("Continue? Y/N\n");
 		cont = scanner.next();
 		
-		while (cont.equals("Y")) {
+		while (cont.equals("Y") | cont.equals("y")) {
 			System.out.println("Input:\n");
 			z = scanner.nextDouble();
 			rslt = rslt - z;

@@ -19,7 +19,8 @@ public class MiKl extends ConversionSetup {
 				System.out.println(rslt + " Miles");
 				break;
 			case 69:
-				
+				ee.dirty();
+				forgive = 1;
 				break;
 			default:
 				forgive = 1;

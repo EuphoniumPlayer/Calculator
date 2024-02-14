@@ -4,13 +4,14 @@ public class Interface {
 	
 	static CalculatorControl math = new CalculatorControl();
 	static ConversionControl convert = new ConversionControl();
+	static MoleControl mole = new MoleControl();
 	static EasterEggs ee = new EasterEggs();
 	static int forgive = 1;
 	
 	public static void main(String[] args) {
 		try (Scanner input = new Scanner(System.in)) {
 			while (forgive == 1) {
-				System.out.println("What would you like to do, math or conversion?\n");
+				System.out.println("What would you like to do, math, conversion, or Mole calculation?\n");
 				String user = input.next();
 
 				switch (user) {
@@ -21,6 +22,10 @@ public class Interface {
 				case "Convert", "convert", "conversion", "Conversion":
 					forgive = 0;
 					convert.begin();
+					break;
+				case "Mole", "mole", "mol", "Mol":
+					forgive = 0;
+					mole.begin();
 					break;
 				case "CHICKENFINGER":
 					ee.cknfngr();
