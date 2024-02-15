@@ -34,7 +34,7 @@ public class Mole_Mass extends MoleSetup {
                 mass = scanner.nextDouble();
                 System.out.println("\nInput the Molar Mass\n");
                 molarmass = scanner.nextDouble();
-                moles = (molarmass / mass);
+                moles = (mass / molarmass);
                 System.out.println(moles + "\n\nAgain? Y/N\n");
                 cont = scanner.next();
                 while (cont.equals("Y") | cont.equals("N")) {
