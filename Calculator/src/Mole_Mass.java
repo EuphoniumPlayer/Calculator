@@ -37,7 +37,7 @@ public class Mole_Mass extends MoleSetup {
                 moles = (mass / molarmass);
                 System.out.println(moles + "\n\nAgain? Y/N\n");
                 cont = scanner.next();
-                while (cont.equals("Y") | cont.equals("N")) {
+                while (cont.equals("Y") | cont.equals("y")) {
                     System.out.println("\n\nInput the mass in GRAMS\n");
                     mass = scanner.nextDouble();
                     System.out.println("Input the Molar Mass");
