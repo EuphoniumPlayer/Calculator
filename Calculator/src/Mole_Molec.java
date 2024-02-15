@@ -14,13 +14,13 @@ public class Mole_Molec extends MoleSetup {
                 forgive = 0;
                 System.out.println("\nInput number of Moles\n");
                 moles = scanner.nextDouble();
-                molecs = Math.round(moles * particles);
+                molecs = (moles * particles);
                 System.out.println(molecs + "\n\nAgain? Y/N");
                 cont = scanner.next();
                 while (cont.equals("Y") | cont.equals("y")) {
                     System.out.println("\nInput number of Moles\n");
                     moles = scanner.nextDouble();
-                    molecs = Math.round(moles * particles);
+                    molecs = (moles * particles);
                     System.out.println(molecs + "\n\nAgain? Y/N");
                     cont = scanner.next();
                 }
@@ -29,13 +29,13 @@ public class Mole_Molec extends MoleSetup {
                 forgive = 0;
                 System.out.println("\nInput number of molecules/particles\n");
                 molecs = scanner.nextDouble();
-                moles = Math.round(molecs / particles);
+                moles = (molecs / particles);
                 System.out.println(moles + "Again? Y/N");
                 cont = scanner.next();
                 while (cont.equals("Y") | cont.equals("y")) {
                     System.out.println("\nInput number of molecules/particles\n");
                     molecs = scanner.nextDouble();
-                    moles = Math.round(molecs / particles);
+                    moles = (molecs / particles);
                     System.out.println(moles + "Again? Y/N");
                     cont = scanner.next();
                 }

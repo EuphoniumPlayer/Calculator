@@ -24,10 +24,9 @@ public class MoleControl {
                     molemolec.run();
                     break;
                 case 3:
-                    forgive = 1; 
-                    //forgive = 0;
-                    //System.out.println("Initializing...\n\n");
-                    //massmolec.run();
+                    forgive = 0;
+                    System.out.println("Initializing...\n\n");
+                    massmolec.run();
                     break;
                 default:
                     System.out.println("Unknown Operation. Please try again.\n");
