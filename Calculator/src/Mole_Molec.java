@@ -7,35 +7,35 @@ public class Mole_Molec extends MoleSetup {
 
     void run () {
         System.out.println("Choose one of the following:\n\n1. Moles to number of molecules/particles\n2. Molecules/particles to Moles\n\n");
-        int action = scanner.nextInt();
         while (forgive == 1) {
+            action = scanner.nextInt();
             switch (action) {
             case 1:
                 forgive = 0;
-                System.out.println("\nInput number of Moles");
-                input = scanner.nextDouble();
-                molecs = Math.round(input * particles);
+                System.out.println("\nInput number of Moles\n");
+                moles = scanner.nextDouble();
+                molecs = Math.round(moles * particles);
                 System.out.println(molecs + "\n\nAgain? Y/N");
                 cont = scanner.next();
                 while (cont.equals("Y") | cont.equals("y")) {
-                    System.out.println("Input number of Moles");
-                    input = scanner.nextDouble();
-                    molecs = Math.round(input * particles);
+                    System.out.println("\nInput number of Moles\n");
+                    moles = scanner.nextDouble();
+                    molecs = Math.round(moles * particles);
                     System.out.println(molecs + "\n\nAgain? Y/N");
                     cont = scanner.next();
                 }
                 break;
             case 2:
                 forgive = 0;
-                System.out.println("Input number of molecules/particles");
-                input = scanner.nextDouble();
-                moles = Math.round(input / particles);
+                System.out.println("\nInput number of molecules/particles\n");
+                molecs = scanner.nextDouble();
+                moles = Math.round(molecs / particles);
                 System.out.println(moles + "Again? Y/N");
                 cont = scanner.next();
                 while (cont.equals("Y") | cont.equals("y")) {
-                    System.out.println("Input number of molecules/particles");
-                    input = scanner.nextDouble();
-                    moles = Math.round(input / particles);
+                    System.out.println("\nInput number of molecules/particles\n");
+                    molecs = scanner.nextDouble();
+                    moles = Math.round(molecs / particles);
                     System.out.println(moles + "Again? Y/N");
                     cont = scanner.next();
                 }

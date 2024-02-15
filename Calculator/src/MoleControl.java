@@ -9,15 +9,14 @@ public class MoleControl {
     static int forgive = 1;
 
     void begin () {
-        System.out.println("Choices: \n\n1. Mole/mass\n2. Mole/molecules/particles\n3. Mass/particles\n\n");
-        int action = scanner.nextInt();
+        System.out.println("Choices: \n\n1. Mole/mass\n2. Mole/molecules/particles\n3. Mass/particles\n");
         while (forgive == 1) {
+            int action = scanner.nextInt();
             switch (action) {
                 case 1:
-                    forgive = 1;
-                    //forgive = 0;
-                    //System.out.println("Initializing...\n\n");
-                    //molemass.run();
+                    forgive = 0;
+                    System.out.println("Initializing...\n\n");
+                    molemass.run();
                     break;
                 case 2:
                     forgive = 0;
@@ -31,7 +30,7 @@ public class MoleControl {
                     //massmolec.run();
                     break;
                 default:
-                    System.out.println("Unknown Operation. Please try again.\n\n");
+                    System.out.println("Unknown Operation. Please try again.\n");
                     forgive = 1;
                     break;
             }
