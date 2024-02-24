@@ -5,7 +5,7 @@ public class Interface {
 	static CalculatorControl math = new CalculatorControl();
 	static ConversionControl convert = new ConversionControl();
 	static MoleControl mole = new MoleControl();
-	static Stoichiometry stoich = new Stoichiometry();
+	static StoichiometryControl stoich = new StoichiometryControl();
 	static EasterEggs ee = new EasterEggs();
 	static int forgive = 1;
 	
