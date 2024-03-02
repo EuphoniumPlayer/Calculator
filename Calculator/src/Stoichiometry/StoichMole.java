@@ -40,60 +40,89 @@ public class StoichMole extends StoichiometrySetup {
                                         // get to the reactant from a product
                                         forgive2 = 0;
                                         System.out.println("\nWhich product would you like to start with, " + prod1 + " (1), or " + prod2 + " (2)?\n");
-                                        start_at = scanner.nextInt();
-                                        switch (start_at) {
-                                            case 1:
-                                                // start with product 1 and get to reactant
-                                                System.out.println("\nEnter the number of moles of " + prod1 + " you need.\n");
-                                                prod1mol = scanner.nextDouble();
-                                                re1mol = (prod1mol * (re1coe/prod1coe));
-                                                System.out.println("\n\nTo make " + prod1mol + " moles of " + prod1 + ", " + re1mol + " moles of " + re1 + " are required.");
-                                                break;
-                                            case 2:
-                                                // start with product 2 and get to reactant
-                                                System.out.println("\nEnter the number of moles of " + prod2 + "you need.\n");
-                                                prod2mol = scanner.nextDouble();
-                                                re1mol = (prod2mol * (re1coe/prod2coe));
-                                                System.out.println("\n\nTo make " + prod2mol + " moles of " + prod2 + ", " + re1mol + " moles of " + re1 + " are required.");
-                                                break;
-                                            default:
-                                                //invalid substance
-                                                forgive2 = 1;
-                                                System.out.println("Invalid substance. Please enter a valid number");
-                                                break;
+                                        while (forgive3 == 1) {
+                                            start_at = scanner.nextInt();
+                                            switch (start_at) {
+                                                case 1:
+                                                    // start with product 1 and get to reactant
+                                                    forgive3 = 0;
+                                                    System.out.println("\nEnter the number of moles of " + prod1 + " you need.\n");
+                                                    prod1mol = scanner.nextDouble();
+                                                    re1mol = (prod1mol * (re1coe/prod1coe));
+                                                    System.out.println("\n\nTo make " + prod1mol + " moles of " + prod1 + ", " + re1mol + " moles of " + re1 + " are required.");
+                                                    break;
+                                                case 2:
+                                                    // start with product 2 and get to reactant
+                                                    forgive3 = 0;
+                                                    System.out.println("\nEnter the number of moles of " + prod2 + "you need.\n");
+                                                    prod2mol = scanner.nextDouble();
+                                                    re1mol = (prod2mol * (re1coe/prod2coe));
+                                                    System.out.println("\n\nTo make " + prod2mol + " moles of " + prod2 + ", " + re1mol + " moles of " + re1 + " are required.");
+                                                    break;
+                                                default:
+                                                    //invalid substance
+                                                    forgive3 = 1;
+                                                    System.out.println("Invalid substance. Please enter a valid number");
+                                                    break;
+                                            }
                                         }
                                         break;
                                     case 2:
                                         // get to product 1
                                         forgive2 = 0;
                                         System.out.println("\nWould you like to start with " + re1 + " (1) or " + prod2 + " (2)?\n");
-                                        start_at = scanner.nextInt();
-                                        switch (start_at) {
-                                            case 1:
-                                                // get to product 1 from the reactant
-                                                System.out.println("\nHow many moles of " + re1 + " are avalible?\n");
-                                                re1mol = scanner.nextDouble();
-                                                prod1mol = (re1mol * (prod1coe / re1coe));
-                                                System.out.println("With " + re1mol + " moles of " + re1 + ", " + prod1mol + " moles of " + prod1 + " can be created.");
-                                                break;
-                                            case 2:
-                                                // get to product 1 from product 2
-                                                System.out.println("\nHow many moles of " + prod2 + " are avalible?\n");
-                                                prod2mol = scanner.nextDouble();
-                                                prod1mol = (prod2mol * (prod1coe / prod2coe));
-                                                System.out.println("With " + prod2mol + " moles of " + prod2 + ", " + prod1mol + " moles of " + prod1 + " can be created.");
-                                                break; 
-                                            default:
-                                                //invalid substance
-                                                forgive2 = 1;
-                                                System.out.println("Invalid substance. Please enter a valid number");
-                                                break;
+                                        while (forgive3 == 1) {
+                                            start_at = scanner.nextInt();
+                                            switch (start_at) {
+                                                case 1:
+                                                    // get to product 1 from the reactant
+                                                    forgive3 = 0;
+                                                    System.out.println("\nHow many moles of " + re1 + " are avalible?\n");
+                                                    re1mol = scanner.nextDouble();
+                                                    prod1mol = (re1mol * (prod1coe / re1coe));
+                                                    System.out.println("\n\nWith " + re1mol + " moles of " + re1 + ", " + prod1mol + " moles of " + prod1 + " can be created.");
+                                                    break;
+                                                case 2:
+                                                    // get to product 1 from product 2
+                                                    forgive3 = 0;
+                                                    System.out.println("\nHow many moles of " + prod2 + " are avalible?\n");
+                                                    prod2mol = scanner.nextDouble();
+                                                    prod1mol = (prod2mol * (prod1coe / prod2coe));
+                                                    System.out.println("\n\nWith " + prod2mol + " moles of " + prod2 + ", " + prod1mol + " moles of " + prod1 + " can be created.");
+                                                    break; 
+                                                default:
+                                                    //invalid substance
+                                                    forgive3 = 1;
+                                                    System.out.println("Invalid substance. Please enter a valid number");
+                                                    break;
+                                            }
                                         }
                                         break;
                                     case 3:
                                         // get to product 2
                                         forgive2 = 0;
-                                        System.out.println("Under construction");
+                                        System.out.println("Would you like to start with " + re1 + " (1) or " + prod1 + " (2)?");
+                                        while (forgive3 == 1) {
+                                            start_at = scanner.nextInt();
+                                            switch (start_at) {
+                                                case 1: 
+                                                    // get to prod2 from re1
+                                                    forgive3 = 0;
+                                                    System.out.println("\nHow many moles of " + re1 + " are avalible?\n");
+                                                    re1mol = scanner.nextDouble();
+                                                    prod2mol = (re1mol * (prod2coe / re1coe));
+                                                    System.out.println("\n\nIf you have " + re1mol + " moles of " + re1 + ", you can make " + prod2mol + " moles of " + prod2 + ".");
+                                                    break;
+                                                case 2: 
+                                                    // get to prod2 from prod1
+                                                    forgive3 = 0;
+                                                    break;
+                                                default:
+                                                    // something went wrong
+                                                    forgive3 = 1;
+                                                    System.out.println("\nSomething went wrong. Please try again\n");
+                                            }
+                                        }
                                         break;
                                     default:
                                         // Outside boundary or invalid input type

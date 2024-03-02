@@ -2,6 +2,7 @@ package Stoichiometry;
 public class StoichiometrySetup {
     public int forgive = 1;
     public int forgive2 = 1;
+    public int forgive3 = 1;
     // baseline
     public int numreact;
     public int numprod;
