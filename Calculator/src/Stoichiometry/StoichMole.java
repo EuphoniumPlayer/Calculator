@@ -1,3 +1,4 @@
+package Stoichiometry;
 import java.util.Scanner;
 
 public class StoichMole extends StoichiometrySetup {
@@ -14,10 +15,12 @@ public class StoichMole extends StoichiometrySetup {
                 case 1:
                     switch (numprod) {
                         case 1:
+                            // 1 reactant one product
                             System.out.println("\nNo Reaction\n");
                             forgive = 0;
                             break;
                         case 2:
+                            // 1 reactant, 2 products
                             forgive = 0;
                             System.out.println("\n\nIMPORTANT: DO NOT INCLUDE SPACES IN THE SUBSTANCE NAMES\n\n");
                             System.out.println("\n\nEnter the name of REACTANT 1 and press enter, followed by\nit's coefficient (press enter again)\n");
@@ -34,20 +37,20 @@ public class StoichMole extends StoichiometrySetup {
                                 get_to = scanner.nextInt();
                                 switch (get_to) {
                                     case 1:
-                                        // get to reactant
+                                        // get to the reactant from a product
                                         forgive2 = 0;
                                         System.out.println("\nWhich product would you like to start with, " + prod1 + " (1), or " + prod2 + " (2)?\n");
                                         start_at = scanner.nextInt();
                                         switch (start_at) {
                                             case 1:
-                                                // start with product 1
+                                                // start with product 1 and get to reactant
                                                 System.out.println("\nEnter the number of moles of " + prod1 + " you need.\n");
                                                 prod1mol = scanner.nextDouble();
                                                 re1mol = (prod1mol * (re1coe/prod1coe));
                                                 System.out.println("\n\nTo make " + prod1mol + " moles of " + prod1 + ", " + re1mol + " moles of " + re1 + " are required.");
                                                 break;
                                             case 2:
-                                                // start with product 2
+                                                // start with product 2 and get to reactant
                                                 System.out.println("\nEnter the number of moles of " + prod2 + "you need.\n");
                                                 prod2mol = scanner.nextDouble();
                                                 re1mol = (prod2mol * (re1coe/prod2coe));
@@ -61,16 +64,39 @@ public class StoichMole extends StoichiometrySetup {
                                         }
                                         break;
                                     case 2:
-                                        // get to substance 2
-                                        forgive = 0;
-                                        System.out.println("Under construction");
+                                        // get to product 1
+                                        forgive2 = 0;
+                                        System.out.println("\nWould you like to start with " + re1 + " (1) or " + prod2 + " (2)?\n");
+                                        start_at = scanner.nextInt();
+                                        switch (start_at) {
+                                            case 1:
+                                                // get to product 1 from the reactant
+                                                System.out.println("\nHow many moles of " + re1 + " are avalible?\n");
+                                                re1mol = scanner.nextDouble();
+                                                prod1mol = (re1mol * (prod1coe / re1coe));
+                                                System.out.println("With " + re1mol + " moles of " + re1 + ", " + prod1mol + " moles of " + prod1 + " can be created.");
+                                                break;
+                                            case 2:
+                                                // get to product 1 from product 2
+                                                System.out.println("\nHow many moles of " + prod2 + " are avalible?\n");
+                                                prod2mol = scanner.nextDouble();
+                                                prod1mol = (prod2mol * (prod1coe / prod2coe));
+                                                System.out.println("With " + prod2mol + " moles of " + prod2 + ", " + prod1mol + " moles of " + prod1 + " can be created.");
+                                                break; 
+                                            default:
+                                                //invalid substance
+                                                forgive2 = 1;
+                                                System.out.println("Invalid substance. Please enter a valid number");
+                                                break;
+                                        }
                                         break;
                                     case 3:
-                                        // get to substance 3
-                                        forgive = 0;
+                                        // get to product 2
+                                        forgive2 = 0;
                                         System.out.println("Under construction");
                                         break;
                                     default:
+                                        // Outside boundary or invalid input type
                                         forgive2 = 1;
                                         System.out.println("\nInvalid. Try again\n\n");
                                         break;

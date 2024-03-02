@@ -1,3 +1,4 @@
+package Stoichiometry;
 import java.util.Scanner;
 
 public class StoichiometryControl {
@@ -7,7 +8,7 @@ public class StoichiometryControl {
     static Scanner scanner = new Scanner(System.in);
     static int operation;
 
-    void begin() {
+    public void begin() {
         System.out.println("\n\nWARNING: THE OUTPUTS OF THIS PARTICULAR PROGRAM ARE \nSUBJECT TO AN INCREASED RISK OF ERROR. IT IS STRONGLY\nADVISED YOU VERIFY THE OUTPUT BY HAND.\n\n");
         System.out.println("What would you like to do?\n1. Mole/Mole\n2. Mass/Mole\n3. Particles/Mole\n4. Mass/Mass\n5. Mass/Particles\nNote: this program is limited to 3 substances per side of the reaction\n");
         while (forgive == 1) {
