@@ -1,4 +1,8 @@
 import java.util.Scanner;
+import Control.EasterEggs;
+import Control.Controllers.CalculatorControl;
+import Control.Controllers.ConversionControl;
+import Control.Controllers.MoleControl;
 
 public class Interface {
 	
