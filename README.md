@@ -1,6 +1,8 @@
 First, I'd like to personally thank you for takinga look at my program =)
 
-Second, I'd like to publically express the purpose of this program. While it may not seem special upon an initial look over, this project has been extemely important to my development as a programmer, and has even led me to discover what I want to do with my life. 
+Second, I'd like to warn you that as it stands, this program requires an IDE to run. However, adjustments shouldn't be too hard to make.
+
+Third, I'd like to publically express the purpose of this program. While it may not seem special upon an initial look over, this project has been extemely important to my development as a programmer, and has even led me to discover what I want to do with my life. 
 
 Initially, I created this project as just a simple addition program that I could use to practice what I learned, and ran in a single class. Then, I added subtraction, multiplication, and division and had one large class running in slow if statements. 
 
