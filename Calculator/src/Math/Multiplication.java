@@ -1,5 +1,7 @@
 package Math;
 
+import Setup.CalculatorSetup;
+
 public class Multiplication extends CalculatorSetup {
 	public void run () {
 		System.out.println("Input:\n");
