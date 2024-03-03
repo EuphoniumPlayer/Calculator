@@ -1,9 +1,13 @@
 package Stoichiometry;
+
+import java.util.Scanner;
+
 public class StoichiometrySetup {
     public int forgive = 1;
     public int forgive2 = 1;
     public int forgive3 = 1;
     // baseline
+    public Scanner scanner = new Scanner(System.in);
     public int numreact;
     public int numprod;
     public int get_to;

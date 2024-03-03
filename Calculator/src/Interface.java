@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 import Stoichiometry.StoichiometryControl;
 
 public class Interface {
