@@ -46,18 +46,18 @@ public class StoichMole extends StoichiometrySetup {
                                                 case 1:
                                                     // start with product 1 and get to reactant
                                                     forgive3 = 0;
-                                                    System.out.println("\nEnter the number of moles of " + prod1 + " you need.\n");
+                                                    System.out.println("\nEnter the number of moles of " + prod1 + " you need/have.\n");
                                                     prod1mol = scanner.nextDouble();
                                                     re1mol = (prod1mol * (re1coe/prod1coe));
-                                                    System.out.println("\n\nTo make " + prod1mol + " moles of " + prod1 + ", " + re1mol + " moles of " + re1 + " are required.");
+                                                    System.out.println("\n\n" + prod1mol + " mole(s) of " + prod1 + " makes/requires " + re1mol + " mole(s) of " + re1 + ".");
                                                     break;
                                                 case 2:
                                                     // start with product 2 and get to reactant
                                                     forgive3 = 0;
-                                                    System.out.println("\nEnter the number of moles of " + prod2 + "you need.\n");
+                                                    System.out.println("\nEnter the number of moles of " + prod2 + "you need/have.\n");
                                                     prod2mol = scanner.nextDouble();
                                                     re1mol = (prod2mol * (re1coe/prod2coe));
-                                                    System.out.println("\n\nTo make " + prod2mol + " moles of " + prod2 + ", " + re1mol + " moles of " + re1 + " are required.");
+                                                    System.out.println("\n\n" + prod2mol + " mole(s) of " + prod2 + ", " + re1mol + " moles of " + re1 + ".");
                                                     break;
                                                 default:
                                                     //invalid substance
@@ -77,18 +77,18 @@ public class StoichMole extends StoichiometrySetup {
                                                 case 1:
                                                     // get to product 1 from the reactant
                                                     forgive3 = 0;
-                                                    System.out.println("\nHow many moles of " + re1 + " are avalible?\n");
+                                                    System.out.println("\nHow many moles of " + re1 + " are avalible/required?\n");
                                                     re1mol = scanner.nextDouble();
                                                     prod1mol = (re1mol * (prod1coe / re1coe));
-                                                    System.out.println("\n\nWith " + re1mol + " moles of " + re1 + ", " + prod1mol + " moles of " + prod1 + " can be created.");
+                                                    System.out.println("\n\n" + re1mol + " mole(s) of " + re1 + " makes/requires " + prod1mol + " mole(s) of " + prod1 + ".");
                                                     break;
                                                 case 2:
                                                     // get to product 1 from product 2
                                                     forgive3 = 0;
-                                                    System.out.println("\nHow many moles of " + prod2 + " are avalible?\n");
+                                                    System.out.println("\nHow many moles of " + prod2 + " are avalible/required?\n");
                                                     prod2mol = scanner.nextDouble();
                                                     prod1mol = (prod2mol * (prod1coe / prod2coe));
-                                                    System.out.println("\n\nWith " + prod2mol + " moles of " + prod2 + ", " + prod1mol + " moles of " + prod1 + " can be created.");
+                                                    System.out.println("\n\n" + prod2mol + " mole(s) of " + prod2 + " makes/requires " + prod1mol + " mole(s) of " + prod1 + ".");
                                                     break; 
                                                 default:
                                                     //invalid substance
@@ -101,7 +101,7 @@ public class StoichMole extends StoichiometrySetup {
                                     case 3:
                                         // get to product 2
                                         forgive2 = 0;
-                                        System.out.println("Would you like to start with " + re1 + " (1) or " + prod1 + " (2)?");
+                                        System.out.println("Would you like to start with the amount of " + re1 + " (1) or " + prod1 + " (2) you need/have?");
                                         while (forgive3 == 1) {
                                             start_at = scanner.nextInt();
                                             switch (start_at) {
@@ -111,16 +111,21 @@ public class StoichMole extends StoichiometrySetup {
                                                     System.out.println("\nHow many moles of " + re1 + " are avalible?\n");
                                                     re1mol = scanner.nextDouble();
                                                     prod2mol = (re1mol * (prod2coe / re1coe));
-                                                    System.out.println("\n\nIf you have " + re1mol + " moles of " + re1 + ", you can make " + prod2mol + " moles of " + prod2 + ".");
+                                                    System.out.println("\n\n" + re1mol + " mole(s) of " + re1 + " can produce/requires " + prod2mol + " mole(s) of " + prod2 + ".");
                                                     break;
                                                 case 2: 
                                                     // get to prod2 from prod1
                                                     forgive3 = 0;
+                                                    System.out.println("How many mole of " + prod1 + " are there?");
+                                                    prod1mol = scanner.nextDouble();
+                                                    prod2mol = (prod1mol * (prod2coe / prod1coe));
+                                                    System.out.println("\n\n" + prod1mol + " mole(s) of " + prod1 + " can produce/requires " + prod2mol + " mole(s) of " + prod2 + ".");
                                                     break;
                                                 default:
                                                     // something went wrong
                                                     forgive3 = 1;
-                                                    System.out.println("\nSomething went wrong. Please try again\n");
+                                                    System.out.println("\nSomething went wrong, please try again\n");
+                                                    break;
                                             }
                                         }
                                         break;
@@ -197,4 +202,3 @@ public class StoichMole extends StoichiometrySetup {
         }
     }
 }
-                            
