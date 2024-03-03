@@ -1,4 +1,4 @@
-package Stoichiometry;
+package Setup;
 
 import java.util.Scanner;
 

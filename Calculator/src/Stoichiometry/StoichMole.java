@@ -1,5 +1,7 @@
 package Stoichiometry;
 
+import Setup.StoichiometrySetup;
+
 public class StoichMole extends StoichiometrySetup {
 
     public void molemole () {
