@@ -10,32 +10,32 @@ public class CalculatorControl {
 	static Subtraction sub = new Subtraction();
 	static Multiplication mul = new Multiplication();
 	static Division div = new Division();
-	static int forgive = 1;
+	static boolean forgive = true;
 	static EasterEggs ee = new EasterEggs();
 	static int dirtymeter = 0;
 	
 	public void begin () {
 		System.out.println("What operation would you like to do?\n\n1. Addition\n2. Subtraction\n3. Multiplication\n4. Division\n");
-		while (forgive == 1) {
+		while (forgive) {
 			int choice = scanner.nextInt();
 			switch (choice) {
 			case 1:
-				forgive = 0;
+				forgive = false;
 				System.out.println("Addition Selected\n");
 				add.run();
 				break;
 			case 2:
-				forgive = 0;
+				forgive = false;
 				System.out.println("Subtraction Selected\n");
 				sub.run();
 				break;
 			case 3:
-				forgive = 0;
+				forgive = false;
 				System.out.println("Multiplication Selected\n");
 				mul.run();
 				break;
 			case 4:
-				forgive = 0;
+				forgive = false;
 				System.out.println("Division Selected\n");
 				div.run();
 				break;
@@ -51,15 +51,14 @@ public class CalculatorControl {
 					System.out.println("Now, try again. 1, 2, 3, or 4 (NOT 69)");
 					dirtymeter = dirtymeter + 1;
 				}
-				forgive = 1;
+				forgive = true;
 				break;
 			default:
-					forgive = 1;
+					forgive = true;
 					System.out.println("\n\nOperation does not exist, please try again. \n");
 					
 				break;
 			}
 		}
 	}
-	
 }

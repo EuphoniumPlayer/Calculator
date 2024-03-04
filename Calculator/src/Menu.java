@@ -13,42 +13,42 @@ public class Menu {
 	static MoleControl mole = new MoleControl();
 	static StoichiometryControl stoich = new StoichiometryControl();
 	static EasterEggs ee = new EasterEggs();
-	static int forgive = 1;
+	static boolean forgive = true;
 	
 	public static void main(String[] args) {
 		try (Scanner input = new Scanner(System.in)) {
-			while (forgive == 1) {
+			while (forgive) {
 				System.out.println("What would you like to do, math, conversion, mole calculation, or stoichiometry?\n");
 				String user = input.next();
 
 				switch (user) {
 				case "Math", "math":
-					forgive = 0;
+					forgive = false;
 					math.begin();
 					break;
 				case "Convert", "convert", "conversion", "Conversion":
-					forgive = 0;
+					forgive = false;
 					convert.begin();
 					break;
 				case "Mole", "mole", "mol", "Mol":
-					forgive = 0;
+					forgive = false;
 					mole.begin();
 					break;
 				case "Stoich", "stoich", "Stoichiometry", "stoichiometry":
-					forgive = 0;
+					forgive = false;
 					stoich.begin();
 					break;
 				case "CHICKENFINGER":
 					ee.cknfngr();
-					forgive = 1;
+					forgive = true;
 					break;
 				case "DOGS":
 					ee.woof();
-					forgive = 1;
+					forgive = true;
 					break;
 				case "69":
 					ee.dirty();
-					forgive = 1;
+					forgive = true;
 					break;
 				default: 
 					System.out.println("\nUnknown Command");

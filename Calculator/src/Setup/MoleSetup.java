@@ -10,6 +10,6 @@ public class MoleSetup {
     public double molecs;
     public double mass;
     public String cont;
-    public int forgive = 1;
+    public boolean forgive = true;
     public EasterEggs ee = new EasterEggs();
 }

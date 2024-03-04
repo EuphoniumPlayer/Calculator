@@ -11,31 +11,31 @@ public class MoleControl {
     static Mole_Mass molemass = new Mole_Mass();
     static Mole_Molec molemolec = new Mole_Molec();
     static MassMolec massmolec = new MassMolec();
-    static int forgive = 1;
+    static boolean forgive = true;
 
     public void begin () {
         System.out.println("Choices: \n\n1. Mole/mass\n2. Mole/molecules/particles\n3. Mass/particles\n");
-        while (forgive == 1) {
+        while (forgive) {
             int action = scanner.nextInt();
             switch (action) {
                 case 1:
-                    forgive = 0;
+                    forgive = false;
                     System.out.println("Initializing...\n\n");
                     molemass.run();
                     break;
                 case 2:
-                    forgive = 0;
+                    forgive = false;
                     System.out.println("Initializing...\n\n");
                     molemolec.run();
                     break;
                 case 3:
-                    forgive = 0;
+                    forgive = false;
                     System.out.println("Initializing...\n\n");
                     massmolec.run();
                     break;
                 default:
                     System.out.println("Unknown Operation. Please try again.\n");
-                    forgive = 1;
+                    forgive = true;
                     break;
             }
         }

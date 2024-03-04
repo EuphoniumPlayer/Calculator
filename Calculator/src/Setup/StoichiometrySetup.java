@@ -3,9 +3,9 @@ package Setup;
 import java.util.Scanner;
 
 public class StoichiometrySetup {
-    public int forgive = 1;
-    public int forgive2 = 1;
-    public int forgive3 = 1;
+    public boolean forgive = true;
+    public boolean forgive2 = true;
+    public boolean forgive3 = true;
     // baseline
     public Scanner scanner = new Scanner(System.in);
     public int numreact;

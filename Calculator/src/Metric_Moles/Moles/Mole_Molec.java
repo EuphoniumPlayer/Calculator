@@ -8,11 +8,11 @@ public class Mole_Molec extends MoleSetup {
 
     public void run () {
         System.out.println("Choose one of the following:\n\n1. Moles to number of molecules/particles\n2. Molecules/particles to Moles\n\n");
-        while (forgive == 1) {
+        while (forgive) {
             action = scanner.nextInt();
             switch (action) {
             case 1:
-                forgive = 0;
+                forgive = false;
                 System.out.println("\nInput number of Moles\n");
                 moles = scanner.nextDouble();
                 molecs = (moles * particles);
@@ -27,7 +27,7 @@ public class Mole_Molec extends MoleSetup {
                 }
                 break;
             case 2:
-                forgive = 0;
+                forgive = false;
                 System.out.println("\nInput number of molecules/particles\n");
                 molecs = scanner.nextDouble();
                 moles = (molecs / particles);
@@ -43,7 +43,7 @@ public class Mole_Molec extends MoleSetup {
                 break;
             default:
                 System.out.println("Unknown Command, please try again");
-                forgive = 1;
+                forgive = true;
                 break;
             }
         }
