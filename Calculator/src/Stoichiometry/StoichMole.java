@@ -506,6 +506,8 @@ public class StoichMole extends StoichiometrySetup {
                                             }
                                         }
                                     case 2: 
+forgive2 = true;
+System.out.println("/n/nSomething went wrong. Please try again/n");
                                         break;
                                     case 3: 
                                         break;
