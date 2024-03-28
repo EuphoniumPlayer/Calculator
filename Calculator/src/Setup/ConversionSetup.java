@@ -2,6 +2,8 @@ package Setup;
 
 import java.util.Scanner;
 
+import Tools.EasterEggs;
+
 public class ConversionSetup {	
 	public Scanner scanner = new Scanner(System.in);
 	public boolean forgive = true;

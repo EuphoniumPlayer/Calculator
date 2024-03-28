@@ -1,18 +1,19 @@
 package Math;
 
 import java.util.Scanner;
-import Setup.EasterEggs;
+
+import Tools.EasterEggs;
 
 public class CalculatorControl {
 	
-	static Scanner scanner = new Scanner(System.in);
-	static Addition add = new Addition();
-	static Subtraction sub = new Subtraction();
-	static Multiplication mul = new Multiplication();
-	static Division div = new Division();
-	static boolean forgive = true;
-	static EasterEggs ee = new EasterEggs();
-	static int dirtymeter = 0;
+	private static final Scanner scanner = new Scanner(System.in);
+	private static final Addition add = new Addition();
+	private static final  Subtraction sub = new Subtraction();
+	private static final Multiplication mul = new Multiplication();
+	private static final Division div = new Division();
+	private static boolean forgive = true;
+	private static final EasterEggs ee = new EasterEggs();
+	private static int dirtymeter = 0;
 	
 	public void begin () {
 		System.out.println("What operation would you like to do?\n\n1. Addition\n2. Subtraction\n3. Multiplication\n4. Division\n");

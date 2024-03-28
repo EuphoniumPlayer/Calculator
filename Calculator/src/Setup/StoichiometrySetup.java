@@ -1,6 +1,7 @@
 package Setup;
 
 import java.util.Scanner;
+import Tools.EasterEggs;
 
 public class StoichiometrySetup {
     public boolean forgive = true;
@@ -8,6 +9,8 @@ public class StoichiometrySetup {
     public boolean forgive3 = true;
     // baseline
     public Scanner scanner = new Scanner(System.in);
+    public final double particles = (6.02 * Math.pow(10,23));
+    public EasterEggs ee = new EasterEggs();
     public int numreact;
     public int numprod;
     public int get_to;

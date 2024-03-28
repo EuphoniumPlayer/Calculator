@@ -6,10 +6,10 @@ import Metric_Moles.Metric_Imperial.MiKl;
 
 public class ConversionControl {
 	
-	static boolean forgive = true;
-	static MiKl mikm = new MiKl();
-	static CF cf = new CF();
-	static Scanner scanner = new Scanner(System.in);
+	private static boolean forgive = true;
+	private static final MiKl mikm = new MiKl();
+	private static final CF cf = new CF();
+	private static final Scanner scanner = new Scanner(System.in);
 	
 	public void begin () {
 		System.out.println("\nWhat type of conversion would you like to make?\n1. Miles to Kilometers\n2. Celsius to Fahrenheit\n");

@@ -3,10 +3,10 @@ import java.util.Scanner;
 
 public class StoichiometryControl {
 
-    static StoichMole sm = new StoichMole();
-    static boolean forgive = true;
-    static Scanner scanner = new Scanner(System.in);
-    static int operation;
+    private static final StoichMole sm = new StoichMole();
+    private static boolean forgive = true;
+    private static final Scanner scanner = new Scanner(System.in);
+    private static int operation;
 
     public void begin() {
         System.out.println("\n\nWARNING: THE OUTPUTS OF THIS PARTICULAR PROGRAM ARE \nSUBJECT TO AN INCREASED RISK OF ERROR. IT IS STRONGLY\nADVISED YOU VERIFY THE OUTPUT BY HAND.\n\n");

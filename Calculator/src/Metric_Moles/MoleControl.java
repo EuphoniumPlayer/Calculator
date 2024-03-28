@@ -7,11 +7,11 @@ import Metric_Moles.Moles.Mole_Molec;
 
 public class MoleControl {
 
-    static Scanner scanner = new Scanner(System.in);
-    static Mole_Mass molemass = new Mole_Mass();
-    static Mole_Molec molemolec = new Mole_Molec();
-    static MassMolec massmolec = new MassMolec();
-    static boolean forgive = true;
+    private static final Scanner scanner = new Scanner(System.in);
+    private static final Mole_Mass molemass = new Mole_Mass();
+    private static final Mole_Molec molemolec = new Mole_Molec();
+    private static final MassMolec massmolec = new MassMolec();
+    private static boolean forgive = true;
 
     public void begin () {
         System.out.println("Choices: \n\n1. Mole/mass\n2. Mole/molecules/particles\n3. Mass/particles\n");

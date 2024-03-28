@@ -3,18 +3,28 @@ package Stoichiometry;
 import Setup.StoichiometrySetup;
 
 public class StoichMole extends StoichiometrySetup {
-
     public void molemole () {
         while (forgive) {
             System.out.println("\nHow many reactants?\n");
             numreact = scanner.nextInt();
+            while (numreact == 69) {
+                ee.dirty();
+                System.out.println("Try again");
+                numreact = scanner.nextInt();
+            }
             System.out.println("\nHow many products?\n");
             numprod = scanner.nextInt();
+            while (numprod == 69) {
+                ee.dirty();
+                System.out.println("Try again");
+                numprod = scanner.nextInt();
+            }
             switch (numreact) {
                 case 1:
                     switch (numprod) {
                         case 1:
                             // 1 reactant one product
+                            ee.dumb();
                             System.out.println("\nNo Reaction\n");
                             forgive = false;
                             break;
@@ -634,6 +644,10 @@ public class StoichMole extends StoichiometrySetup {
                         case 3:
                             // 2 reactants, 3 products
                             forgive = false;
+                            System.out.println("Enter the name of Reactant 1 (HIT ENTER) followed by it's coefficient.");
+                            re1 = scanner.next();
+                            re1coe = scanner.nextDouble();
+                            
                             break;
                         default:
                             // invalid number of products

@@ -3,7 +3,6 @@ package Metric_Moles.Moles;
 import Setup.MoleSetup;
 
 public class Mole_Mass extends MoleSetup {
-
     public void run () {
         System.out.println("\n\nWhich would you like to do?\n\n1. Moles to mass\n2. Mass to Moles\n");
         while (forgive) {

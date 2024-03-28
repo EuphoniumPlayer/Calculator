@@ -2,10 +2,7 @@ package Metric_Moles.Moles;
 
 import Setup.MoleSetup;
 
-public class MassMolec extends MoleSetup {
-    
-    static double particles = (6.02 * Math.pow(10, 23));
-    
+public class MassMolec extends MoleSetup {  
     public void run () {
         System.out.println("\nWhich would you like to do?\n\n1. Mass to Molecules/Particles\n2. Molecules/Particles to Mass\n");
         while (forgive) {

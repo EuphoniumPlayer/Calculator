@@ -19,6 +19,6 @@ public class Subtraction extends CalculatorSetup {
 			System.out.println("Continue?\n");
 			cont = scanner.next();
 		}
-	System.out.println("End: " + rslt);	
+		System.out.println("End: " + rslt);	
 	}
 }

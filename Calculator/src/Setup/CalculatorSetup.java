@@ -2,6 +2,8 @@ package Setup;
 
 import java.util.Scanner;
 
+import Tools.EasterEggs;
+
 public class CalculatorSetup {
 	public EasterEggs ee = new EasterEggs();
 	public double x;

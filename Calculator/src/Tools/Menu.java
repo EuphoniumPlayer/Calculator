@@ -1,19 +1,19 @@
+package Tools;
 import java.util.Scanner;
 import Stoichiometry.StoichiometryControl;
 
 import Metric_Moles.ConversionControl;
 import Math.CalculatorControl;
-import Setup.EasterEggs;
 import Metric_Moles.MoleControl;
 
 public class Menu {
 	
-	static CalculatorControl math = new CalculatorControl();
-	static ConversionControl convert = new ConversionControl();
-	static MoleControl mole = new MoleControl();
-	static StoichiometryControl stoich = new StoichiometryControl();
-	static EasterEggs ee = new EasterEggs();
-	static boolean forgive = true;
+	private static final CalculatorControl math = new CalculatorControl();
+	private static final ConversionControl convert = new ConversionControl();
+	private static final MoleControl mole = new MoleControl();
+	private static final StoichiometryControl stoich = new StoichiometryControl();
+	private static final EasterEggs ee = new EasterEggs();
+	private static boolean forgive = true;
 	
 	public static void main(String[] args) {
 		try (Scanner input = new Scanner(System.in)) {
