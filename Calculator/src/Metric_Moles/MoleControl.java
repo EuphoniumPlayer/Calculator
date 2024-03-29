@@ -1,15 +1,17 @@
 package Metric_Moles;
 
-import Tools.Universal;
+import java.util.Scanner;
 import Metric_Moles.Moles.MassMolec;
 import Metric_Moles.Moles.Mole_Mass;
 import Metric_Moles.Moles.Mole_Molec;
 
-public class MoleControl extends Universal {
+public class MoleControl {
 
+    private static final Scanner scanner = new Scanner(System.in);
     private static final Mole_Mass molemass = new Mole_Mass();
     private static final Mole_Molec molemolec = new Mole_Molec();
     private static final MassMolec massmolec = new MassMolec();
+    private static boolean forgive = true;
 
     public void begin () {
         System.out.println("Choices: \n\n1. Mole/mass\n2. Mole/molecules/particles\n3. Mass/particles\n");
