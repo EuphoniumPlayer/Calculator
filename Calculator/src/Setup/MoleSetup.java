@@ -1,15 +1,13 @@
 package Setup;
 
-import java.util.Scanner;
+import Tools.Universal;
 
-public class MoleSetup {
-    public Scanner scanner = new Scanner(System.in);
+public class MoleSetup extends Universal{
     public int action;
     public double molarmass;
     public double moles;
     public double molecs;
     public double mass;
     public String cont;
-    public int forgive = 1;
-    public EasterEggs ee = new EasterEggs();
+    public final double particles = (6.02 * Math.pow(10,23));
 }

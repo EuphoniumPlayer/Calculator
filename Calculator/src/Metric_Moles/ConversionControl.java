@@ -1,25 +1,27 @@
 package Metric_Moles;
 
-import java.util.Scanner;
+import Tools.Universal;
 import Metric_Moles.Metric_Imperial.CF;
 import Metric_Moles.Metric_Imperial.MiKl;
 
-public class ConversionControl {
+public class ConversionControl extends Universal {
 	
-	static double forgive = 1;
-	static MiKl mikm = new MiKl();
-	static CF cf = new CF();
-	static Scanner scanner = new Scanner(System.in);
+	private static boolean forgive = true;
+	private static final MiKl mikm = new MiKl();
+	private static final CF cf = new CF();
 	
 	public void begin () {
 		System.out.println("\nWhat type of conversion would you like to make?\n1. Miles to Kilometers\n2. Celsius to Fahrenheit\n");
-		while (forgive == 1) {
+		
+		while (forgive) {
 			int input = scanner.nextInt();
 			switch (input) {
 			case 1:
+				forgive = false;
 				mikm.start();
 				break;
 			case 2:
+				forgive = false;
 				cf.start();
 				break;
 			default: 

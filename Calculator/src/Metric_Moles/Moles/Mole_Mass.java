@@ -3,14 +3,13 @@ package Metric_Moles.Moles;
 import Setup.MoleSetup;
 
 public class Mole_Mass extends MoleSetup {
-
     public void run () {
         System.out.println("\n\nWhich would you like to do?\n\n1. Moles to mass\n2. Mass to Moles\n");
-        while (forgive == 1) {
+        while (forgive) {
             action = scanner.nextInt();
             switch (action) {
             case 1:
-                forgive = 0;
+                forgive = false;
                 System.out.println("\n\nInput number of moles\n");
                 moles = scanner.nextDouble();
                 System.out.println("\nInput Molar Mass\n");
@@ -29,7 +28,7 @@ public class Mole_Mass extends MoleSetup {
                 }
                 break;
             case 2:
-                forgive = 0;
+                forgive = false;
                 System.out.println("\nInput the mass in GRAMS\n");
                 mass = scanner.nextDouble();
                 System.out.println("\nInput the Molar Mass\n");
@@ -49,7 +48,7 @@ public class Mole_Mass extends MoleSetup {
                 break;
             default:
                 System.out.println("Unknown command, please try again");
-                forgive = 1;
+                forgive = true;
                 break;
             }
         }
