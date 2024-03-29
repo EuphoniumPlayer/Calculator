@@ -1,14 +1,9 @@
 package Setup;
 
-import java.util.Scanner;
+import Tools.Universal;
 
-import Tools.EasterEggs;
-
-public class ConversionSetup {	
-	public Scanner scanner = new Scanner(System.in);
-	public boolean forgive = true;
+public class ConversionSetup extends Universal {
 	public double input;
 	public double rslt;
 	public int order;
-	public EasterEggs ee = new EasterEggs();
 }
