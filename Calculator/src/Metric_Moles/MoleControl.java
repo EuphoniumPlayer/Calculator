@@ -1,13 +1,12 @@
 package Metric_Moles;
 
-import java.util.Scanner;
+import Tools.Universal;
 import Metric_Moles.Moles.MassMolec;
 import Metric_Moles.Moles.Mole_Mass;
 import Metric_Moles.Moles.Mole_Molec;
 
-public class MoleControl {
+public class MoleControl extends Universal {
 
-    private static final Scanner scanner = new Scanner(System.in);
     private static final Mole_Mass molemass = new Mole_Mass();
     private static final Mole_Molec molemolec = new Mole_Molec();
     private static final MassMolec massmolec = new MassMolec();

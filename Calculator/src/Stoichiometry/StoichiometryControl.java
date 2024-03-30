@@ -1,11 +1,11 @@
 package Stoichiometry;
-import java.util.Scanner;
 
-public class StoichiometryControl {
+import Tools.Universal;
+
+public class StoichiometryControl extends Universal {
 
     private static final StoichMole sm = new StoichMole();
     private static boolean forgive = true;
-    private static final Scanner scanner = new Scanner(System.in);
     private static int operation;
 
     public void begin() {
