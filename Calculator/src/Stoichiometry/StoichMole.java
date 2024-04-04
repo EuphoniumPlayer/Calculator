@@ -644,10 +644,267 @@ public class StoichMole extends StoichiometrySetup {
                         case 3:
                             // 2 reactants, 3 products
                             forgive = false;
-                            System.out.println("Enter the name of Reactant 1 (HIT ENTER) followed by it's coefficient.");
+                            System.out.println("\n\nEnter the name of Reactant 1 (HIT ENTER) followed by it's coefficient.\n");
                             re1 = scanner.next();
                             re1coe = scanner.nextDouble();
-                            
+                            System.out.println("\n\nNow the second reactant, entered the exact same way.\n");
+                            re2 = scanner.next();
+                            re2coe = scanner.nextDouble();
+                            System.out.println("\n\nNow product 1\n");
+                            prod1 = scanner.next();
+                            prod1coe = scanner.nextDouble();
+                            System.out.println("\n\nNow for product 2\n");
+                            prod2 = scanner.next();
+                            prod2coe = scanner.nextDouble();
+                            System.out.println("\n\nFinally, product 3\n");
+                            prod3 = scanner.next();
+                            prod3coe = scanner.nextDouble();
+                            System.out.println("\n\nWhat would you like to GET TO, " + re1 + " (1), " + re2 + " (2), " + prod1 + " (3), " + prod2 + " (4), or " + prod3 + " (5)?\n");
+                            while (forgive2) {
+                                get_to = scanner.nextInt();
+                                switch (get_to) {
+                                    case 1:
+                                        // get to re1
+                                        forgive2 = false;
+                                        System.out.println("\n\nWhich substance would you like to START WITH, " + re2 + " (1), " + prod1 + " (2), " + prod2 + " (3), or " + prod3 + " (4)?\n");
+                                        while (forgive3) {
+                                            start_at = scanner.nextInt();
+                                            switch (start_at) {
+                                                case 1: 
+                                                    // get to re1 from re2
+                                                    forgive3 = false;
+                                                    System.out.println("\n\nHow many moles of " + re2 + "?");
+                                                    re2mol = scanner.nextDouble();
+                                                    re1mol = (re2mol * (re1coe/re2coe));
+                                                    System.out.println("\n\n" + re2mol + " mole(s) of " + re2  + " makes/requires " + re1mol + " mole(s) of " + re1);
+                                                    break;
+                                                case 2:
+                                                    // get to re1 from prod1
+                                                    forgive3 = false;
+                                                    System.out.println("\n\nHow many moles of " + prod1 + "?");
+                                                    prod1mol = scanner.nextDouble();
+                                                    re1mol = (prod1mol * (re1coe/prod1coe));
+                                                    System.out.println("\n\n" + prod1mol + " mole(s) of " + prod1  + " makes/requires " + re1mol + " mole(s) of " + re1);
+                                                    break;
+                                                case 3: 
+                                                    // get to re1 from prod2
+                                                    forgive3 = false;
+                                                    System.out.println("\n\nHow many moles of " + prod2 + "?");
+                                                    prod2mol = scanner.nextDouble();
+                                                    re1mol = (prod2mol * (re1coe/prod2coe));
+                                                    System.out.println("\n\n" + prod2mol + " mole(s) of " + prod2  + " makes/requires " + re1mol + " mole(s) of " + re1);
+                                                    break;
+                                                case 4:
+                                                    // get to re1 from prod3
+                                                    forgive3 = false;
+                                                    System.out.println("\n\nHow many moles of " + prod3 + "?");
+                                                    prod3mol = scanner.nextDouble();
+                                                    re1mol = (prod3mol * (re1coe/prod3coe));
+                                                    System.out.println("\n\n" + prod3mol + " mole(s) of " + prod3  + " makes/requires " + re1mol + " mole(s) of " + re1);
+                                                    break;
+                                                default:
+                                                    // invalid
+                                                    System.out.println("\n\nInvalid. Please try again\n");
+                                                    forgive3 = true;
+                                                    break;
+                                            }
+                                        }
+                                        break;
+                                    case 2: 
+                                        // get to re2
+                                        forgive2 = false;
+                                        System.out.println("\n\nWhich substance would you like to START WITH, " + re1 + " (1), " + prod1 + " (2), " + prod2 + " (3), or " + prod3 + " (4)?\n");
+                                        while (forgive3) {
+                                            start_at = scanner.nextInt();
+                                            switch (start_at) {
+                                                case 1: 
+                                                    // get to re2 from re1
+                                                    forgive3 = false;
+                                                    System.out.println("\n\nHow many moles of " + re1 + "?");
+                                                    re1mol = scanner.nextDouble();
+                                                    re2mol = (re1mol * (re2coe/re1coe));
+                                                    System.out.println("\n\n" + re1mol + " mole(s) of " + re1  + " makes/requires " + re2mol + " mole(s) of " + re2);
+                                                    break;
+                                                case 2:
+                                                    // get to re2 from prod1
+                                                    forgive3 = false;
+                                                    System.out.println("\n\nHow many moles of " + prod1 + "?");
+                                                    prod1mol = scanner.nextDouble();
+                                                    re1mol = (prod1mol * (re1coe/prod1coe));
+                                                    System.out.println("\n\n" + prod1mol + " mole(s) of " + prod1  + " makes/requires " + re1mol + " mole(s) of " + re1);
+                                                    break;
+                                                case 3: 
+                                                    // get to re2 from prod2
+                                                    forgive3 = false;
+                                                    System.out.println("\n\nHow many moles of " + prod2 + "?");
+                                                    prod2mol = scanner.nextDouble();
+                                                    re2mol = (prod2mol * (re2coe/prod2coe));
+                                                    System.out.println("\n\n" + prod2mol + " mole(s) of " + prod2  + " makes/requires " + re2mol + " mole(s) of " + re2);
+                                                    break;
+                                                case 4:
+                                                    // get to re2 from prod3
+                                                    forgive3 = false;
+                                                    System.out.println("\n\nHow many moles of " + prod3 + "?");
+                                                    prod3mol = scanner.nextDouble();
+                                                    re2mol = (prod3mol * (re2coe/prod3coe));
+                                                    System.out.println("\n\n" + prod3mol + " mole(s) of " + prod3  + " makes/requires " + re2mol + " mole(s) of " + re2);
+                                                    break;
+                                                default:
+                                                    // invalid
+                                                    System.out.println("\n\nInvalid. Please try again\n");
+                                                    forgive3 = true;
+                                                    break;
+                                            }
+                                        }
+                                        break;
+                                    case 3: 
+                                        // get to prod1
+                                        forgive2 = false;
+                                        System.out.println("\n\nWhich substance would you like to START WITH, " + re1 + " (1), " + re2 + " (2), " + prod2 + " (3), or " + prod3 + " (4)?\n");
+                                        while (forgive3) {
+                                            start_at = scanner.nextInt();
+                                            switch (start_at) {
+                                                case 1: 
+                                                    // get to prod1 from re1
+                                                    forgive3 = false;
+                                                    System.out.println("\n\nHow many moles of " + re1 + "?");
+                                                    re1mol = scanner.nextDouble();
+                                                    prod1mol = (re1mol * (prod1coe/re1coe));
+                                                    System.out.println("\n\n" + re1mol + " mole(s) of " + re1  + " makes/requires " + prod1mol + " mole(s) of " + prod1);
+                                                    break;
+                                                case 2:
+                                                    // get to prod1 from re2
+                                                    forgive3 = false;
+                                                    System.out.println("\n\nHow many moles of " + re2 + "?");
+                                                    re2mol = scanner.nextDouble();
+                                                    prod1mol = (re2mol * (prod1coe/re2coe));
+                                                    System.out.println("\n\n" + re2mol + " mole(s) of " + re2  + " makes/requires " + prod1mol + " mole(s) of " + prod1);
+                                                    break;
+                                                case 3: 
+                                                    // get to prod1 from prod2
+                                                    forgive3 = false;
+                                                    System.out.println("\n\nHow many moles of " + prod2 + "?");
+                                                    prod2mol = scanner.nextDouble();
+                                                    prod1mol = (prod2mol * (prod1coe/prod2coe));
+                                                    System.out.println("\n\n" + prod2mol + " mole(s) of " + prod2  + " makes/requires " + prod1mol + " mole(s) of " + prod1);
+                                                    break;
+                                                case 4:
+                                                    // get to prod1 from prod3
+                                                    forgive3 = false;
+                                                    System.out.println("\n\nHow many moles of " + prod3 + "?");
+                                                    prod3mol = scanner.nextDouble();
+                                                    prod1mol = (prod3mol * (prod1coe/prod3coe));
+                                                    System.out.println("\n\n" + prod3mol + " mole(s) of " + prod3  + " makes/requires " + prod1mol + " mole(s) of " + prod1);
+                                                    break;
+                                                default:
+                                                    // invalid
+                                                    System.out.println("\n\nInvalid. Please try again\n");
+                                                    forgive3 = true;
+                                                    break;
+                                            }
+                                        }
+                                        break;
+                                    case 4: 
+                                        // get to prod2
+                                        forgive2 = false;
+                                        System.out.println("\n\nWhich substance would you like to START WITH, " + re1 + " (1), " + re2 + " (2), " + prod1 + " (3), or " + prod3 + " (4)?\n");
+                                        while (forgive3) {
+                                            start_at = scanner.nextInt();
+                                            switch (start_at) {
+                                                case 1: 
+                                                    // get to prod2 from re1
+                                                    forgive3 = false;
+                                                    System.out.println("\n\nHow many moles of " + re1 + "?");
+                                                    re1mol = scanner.nextDouble();
+                                                    prod2mol = (re1mol * (prod2coe/re1coe));
+                                                    System.out.println("\n\n" + re1mol + " mole(s) of " + re1  + " makes/requires " + prod2mol + " mole(s) of " + prod2);
+                                                    break;
+                                                case 2:
+                                                    // get to prod2 from re2
+                                                    forgive3 = false;
+                                                    System.out.println("\n\nHow many moles of " + re2 + "?");
+                                                    re2mol = scanner.nextDouble();
+                                                    prod2mol = (re2mol * (prod2coe/re2coe));
+                                                    System.out.println("\n\n" + re2mol + " mole(s) of " + re2  + " makes/requires " + prod2mol + " mole(s) of " + prod2);
+                                                    break;
+                                                case 3: 
+                                                    // get to prod2 from prod1
+                                                    forgive3 = false;
+                                                    System.out.println("\n\nHow many moles of " + prod1 + "?");
+                                                    prod1mol = scanner.nextDouble();
+                                                    prod2mol = (prod1mol * (prod2coe/prod1coe));
+                                                    System.out.println("\n\n" + prod1mol + " mole(s) of " + prod1  + " makes/requires " + prod2mol + " mole(s) of " + prod2);
+                                                    break;
+                                                case 4:
+                                                    // get to prod2 from prod3
+                                                    forgive3 = false;
+                                                    System.out.println("\n\nHow many moles of " + prod3 + "?");
+                                                    prod3mol = scanner.nextDouble();
+                                                    prod2mol = (prod3mol * (prod2coe/prod3coe));
+                                                    System.out.println("\n\n" + prod3mol + " mole(s) of " + prod3  + " makes/requires " + prod2mol + " mole(s) of " + prod2);
+                                                    break;
+                                                default:
+                                                    // invalid
+                                                    System.out.println("\n\nInvalid. Please try again\n");
+                                                    forgive3 = true;
+                                                    break;
+                                            }
+                                        }
+                                        break;
+                                    case 5: 
+                                        // get to prod3
+                                        forgive2 = false;
+                                        System.out.println("\n\nWhich substance would you like to START WITH, " + re1 + " (1), " + re2 + " (2), " + prod1 + " (3), or " + prod2 + " (4)?\n");
+                                        while (forgive3) {
+                                            start_at = scanner.nextInt();
+                                            switch (start_at) {
+                                                case 1: 
+                                                    // get to prod3 from re1
+                                                    forgive3 = false;
+                                                    System.out.println("\n\nHow many moles of " + re1 + "?");
+                                                    re1mol = scanner.nextDouble();
+                                                    prod3mol = (re1mol * (prod3coe/re1coe));
+                                                    System.out.println("\n\n" + re1mol + " mole(s) of " + re1  + " makes/requires " + prod3mol + " mole(s) of " + prod3);
+                                                    break;
+                                                case 2:
+                                                    // get to prod3 from re2
+                                                    forgive3 = false;
+                                                    System.out.println("\n\nHow many moles of " + re2 + "?");
+                                                    re2mol = scanner.nextDouble();
+                                                    prod3mol = (re2mol * (prod3coe/re2coe));
+                                                    System.out.println("\n\n" + re2mol + " mole(s) of " + re2  + " makes/requires " + prod3mol + " mole(s) of " + prod3);
+                                                    break;
+                                                case 3: 
+                                                    // get to prod3 from prod1
+                                                    forgive3 = false;
+                                                    System.out.println("\n\nHow many moles of " + prod1 + "?");
+                                                    prod1mol = scanner.nextDouble();
+                                                    prod3mol = (prod1mol * (prod3coe/prod1coe));
+                                                    System.out.println("\n\n" + prod1mol + " mole(s) of " + prod1  + " makes/requires " + prod3mol + " mole(s) of " + prod3);
+                                                    break;
+                                                case 4:
+                                                    // get to prod3 from prod2
+                                                    forgive3 = false;
+                                                    System.out.println("\n\nHow many moles of " + prod2 + "?");
+                                                    prod2mol = scanner.nextDouble();
+                                                    prod3mol = (prod2mol * (prod3coe/prod2coe));
+                                                    System.out.println("\n\n" + prod2mol + " mole(s) of " + prod2  + " makes/requires " + prod3mol + " mole(s) of " + prod3);
+                                                    break;
+                                                default:
+                                                    // invalid
+                                                    System.out.println("\n\nInvalid. Please try again\n");
+                                                    forgive3 = true;
+                                                    break;
+                                            }
+                                        }
+                                        break;
+                                    default:
+                                        // invalid
+                                        System.out.println("\n\nNumerical value invalid, please try again\n");
+                                        forgive2 = true;
+                                        break;
+                                }
+                            }
                             break;
                         default:
                             // invalid number of products
