@@ -1,18 +1,14 @@
 package Math;
 
-import java.util.Scanner;
+import Tools.Universal;
 
-import Tools.EasterEggs;
-
-public class CalculatorControl {
+public class CalculatorControl extends Universal {
 	
-	private static final Scanner scanner = new Scanner(System.in);
 	private static final Addition add = new Addition();
 	private static final  Subtraction sub = new Subtraction();
 	private static final Multiplication mul = new Multiplication();
 	private static final Division div = new Division();
 	private static boolean forgive = true;
-	private static final EasterEggs ee = new EasterEggs();
 	private static int dirtymeter = 0;
 	
 	public void begin () {

@@ -12,7 +12,6 @@ public class ConversionControl extends Universal {
 	
 	public void begin () {
 		System.out.println("\nWhat type of conversion would you like to make?\n1. Miles to Kilometers\n2. Celsius to Fahrenheit\n");
-		
 		while (forgive) {
 			int input = scanner.nextInt();
 			switch (input) {

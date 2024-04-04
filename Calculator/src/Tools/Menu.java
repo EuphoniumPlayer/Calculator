@@ -1,5 +1,6 @@
 package Tools;
 
+import Stoichiometry.StoichiometryControl;
 import Metric_Moles.ConversionControl;
 import Math.CalculatorControl;
 import Metric_Moles.MoleControl;
@@ -9,12 +10,13 @@ public class Menu extends Universal {
 	private static final CalculatorControl math = new CalculatorControl();
 	private static final ConversionControl convert = new ConversionControl();
 	private static final MoleControl mole = new MoleControl();
+	private static final StoichiometryControl stoich = new StoichiometryControl();
 	private static boolean forgive = true;
 	
 	public void start () {
-		while (forgive) {
-			System.out.println("What would you like to do, math, conversion, mole calculation, or stoichiometry?\n");
-			String user = scanner.next();
+			while (forgive) {
+				System.out.println("What would you like to do, math, conversion, mole calculation, or stoichiometry?\n");
+				String user = scanner.next();
 			switch (user) {
 			case "Math", "math":
 				forgive = false;
@@ -28,7 +30,11 @@ public class Menu extends Universal {
 				forgive = false;
 				mole.begin();
 				break;
-			case "CHICKENFINGER":
+			case "Stoich", "stoich", "Stoichiometry", "stoichiometry":
+				forgive = false;
+				stoich.begin();
+				break;
+		case "CHICKENFINGER":
 				ee.cknfngr();
 				forgive = true;
 				break;
