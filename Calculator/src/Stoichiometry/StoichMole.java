@@ -919,6 +919,68 @@ public class StoichMole extends StoichiometrySetup {
                         case 1:
                             // 3 reactants, 1 product
                             forgive = false;
+                            System.out.println("\n\nEnter the name of your first reactant (hit enter after, NO spaces), followed by its coefficent.\n");
+                            re1 = scanner.next();
+                            re1coe = scanner.nextDouble();
+                            System.out.println("\n\nRepeat for the second reactant.\n");
+                            re2 = scanner.next();
+                            re2coe = scanner.nextDouble();
+                            System.out.println("\n\nNow the third reactant\n");
+                            re3 = scanner.next();
+                            re3coe = scanner.nextDouble();
+                            System.out.println("\n\nNow the first and only product.\n");
+                            prod1 = scanner.next();
+                            prod1coe = scanner.nextDouble();
+                            System.out.println("\n\nWhich substance would you like to GET TO, " + re1 + " (1), " + re2 + " (2), " + re3 + " (3), or " + prod1 + " (4)?\n");
+                            while (forgive2) {
+                                get_to = scanner.nextInt();
+                                switch (get_to) {
+                                    case 1:
+                                        // get to re1
+                                        forgive2 = false;
+                                        System.out.println("\n\nWhich substance would you like to START WITH, " + re2 + " (1), " + re3 + " (2), or " + prod1 + "(3)?");
+                                        while (forgive3) { 
+                                            start_at = scanner.nextInt();
+                                            switch (start_at) {
+                                                case 1: 
+                                                    // get to re1 from re2
+                                                    forgive3 = false;
+                                                    break;
+                                                case 2: 
+                                                    // get to re1 from re3
+                                                    forgive3 = false;
+                                                    break;
+                                                case 3: 
+                                                    // get to re1 from prod1
+                                                    forgive3 = false;
+                                                    break;
+                                                default:
+                                                    // invalid
+                                                    System.out.println("\n\nInvalid input. Please input a valid value.\n");
+                                                    forgive3 = true;
+                                                    break;
+                                            }
+                                        }
+                                        break;
+                                    case 2: 
+                                        // get to re2
+                                        forgive2 = false;
+                                        break;
+                                    case 3: 
+                                        // get to re3
+                                        forgive2 = false;
+                                        break;
+                                    case 4:
+                                        // get to prod1
+                                        forgive2 = false;
+                                        break;
+                                    default: 
+                                        //invalid
+                                        System.out.println("\n\nInvalid input. Please re enter.\n");
+                                        forgive2 = true;
+                                        break;
+                                }
+                            }
                             break;
                         case 2:
                             // 3 reactants, 2 products
