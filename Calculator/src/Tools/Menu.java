@@ -13,7 +13,7 @@ public class Menu extends Universal {
 	
 	public void start () {
 		while (forgive) {
-			System.out.println("What would you like to do, math, conversion, mole calculation, or stoichiometry?\n");
+			System.out.println("What would you like to do, math, conversion, or mole calculation?\n");
 			String user = scanner.next();
 			switch (user) {
 			case "Math", "math":
