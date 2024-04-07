@@ -2,7 +2,7 @@ package Stoichiometry;
 
 import Setup.StoichiometrySetup;
 
-public class StoichMole extends StoichiometrySetup {
+public class StoichMoleRetired extends StoichiometrySetup {
     public void molemole () {
         while (forgive) {
             System.out.println("\nHow many reactants?\n");
@@ -983,10 +983,12 @@ public class StoichMole extends StoichiometrySetup {
                             }
                             break;
                         case 2:
+                            // The Penultimate
                             // 3 reactants, 2 products
                             forgive = false;
                             break;
                         case 3:
+                            // The Ultimate
                             // 3 reactants, 3 products
                             forgive = false;
                             break;

@@ -4,7 +4,7 @@ import Tools.Universal;
 
 public class StoichiometryControl extends Universal {
 
-    private static final StoichMole sm = new StoichMole();
+    private static final StoichMoleRetired sm = new StoichMoleRetired();
     private static boolean forgive = true;
     private static int operation;
 
