@@ -3,12 +3,14 @@ package Tools;
 import Metric_Moles.ConversionControl;
 import Math.CalculatorControl;
 import Metric_Moles.MoleControl;
+import Stoichiometry.StoichControl;
 
 public class Menu extends Universal {
 	
 	private static final CalculatorControl math = new CalculatorControl();
 	private static final ConversionControl convert = new ConversionControl();
 	private static final MoleControl mole = new MoleControl();
+	private static final StoichControl stoich = new StoichControl();
 	
 	public void start () {
 		while (forgive) {
@@ -26,6 +28,10 @@ public class Menu extends Universal {
 			case "Mole", "mole", "mol", "Mol":
 				forgive = false;
 				mole.begin();
+				break;
+			case "Stoichiometry", "stoichiometry", "Stoich", "stoich": 
+				forgive = false;
+				stoich.begin();
 				break;
 			case "CHICKENFINGER":
 				ee.cknfngr();
