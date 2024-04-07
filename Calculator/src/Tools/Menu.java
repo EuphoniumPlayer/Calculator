@@ -9,7 +9,6 @@ public class Menu extends Universal {
 	private static final CalculatorControl math = new CalculatorControl();
 	private static final ConversionControl convert = new ConversionControl();
 	private static final MoleControl mole = new MoleControl();
-	private static boolean forgive = true;
 	
 	public void start () {
 		while (forgive) {

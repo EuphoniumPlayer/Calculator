@@ -6,7 +6,6 @@ import Metric_Moles.Metric_Imperial.MiKl;
 
 public class ConversionControl extends Universal {
 	
-	private static boolean forgive = true;
 	private static final MiKl mikm = new MiKl();
 	private static final CF cf = new CF();
 	
