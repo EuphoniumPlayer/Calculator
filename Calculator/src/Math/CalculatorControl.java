@@ -1,44 +1,51 @@
 package Math;
 
-import java.util.Scanner;
+import Tools.Universal;
 
-import Tools.EasterEggs;
-
-public class CalculatorControl {
+public class CalculatorControl extends Universal {
 	
-	private static final Scanner scanner = new Scanner(System.in);
 	private static final Addition add = new Addition();
-	private static final  Subtraction sub = new Subtraction();
+	private static final Subtraction sub = new Subtraction();
 	private static final Multiplication mul = new Multiplication();
 	private static final Division div = new Division();
-	private static boolean forgive = true;
-	private static final EasterEggs ee = new EasterEggs();
+	private static final Exponents ex = new Exponents();
+	private static final Logarithms log = new Logarithms();
 	private static int dirtymeter = 0;
 	
 	public void begin () {
-		System.out.println("What operation would you like to do?\n\n1. Addition\n2. Subtraction\n3. Multiplication\n4. Division\n");
+		System.out.println("What operation would you like to do?\n\n1. Addition\n2. Subtraction\n3. Multiplication\n4. Division\n5. Exponents\n6. Logarithms\n");
 		while (forgive) {
 			int choice = scanner.nextInt();
 			switch (choice) {
 			case 1:
 				forgive = false;
-				System.out.println("Addition Selected\n");
+				System.out.println("\nAddition Selected\n");
 				add.run();
 				break;
 			case 2:
 				forgive = false;
-				System.out.println("Subtraction Selected\n");
+				System.out.println("\nSubtraction Selected\n");
 				sub.run();
 				break;
 			case 3:
 				forgive = false;
-				System.out.println("Multiplication Selected\n");
+				System.out.println("\nMultiplication Selected\n");
 				mul.run();
 				break;
 			case 4:
 				forgive = false;
-				System.out.println("Division Selected\n");
+				System.out.println("\nDivision Selected\n");
 				div.run();
+				break;
+			case 5:
+				forgive = false;
+				System.out.println("\nExponents Selected\n");
+				ex.run();
+				break;
+			case 6:
+				forgive = false;
+				System.out.println("\nLogarithms Selected\n");
+				log.run();
 				break;
 			case 69:
 				ee.dirty();
