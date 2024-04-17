@@ -5,16 +5,16 @@ import Setup.StoichiometrySetup;
 public class StoichMoles extends StoichiometrySetup {
     public void go () {
         System.out.println("\n\nWhat is the name of the substance you are STARTING AT?\n");
-        sub1 = scanner.next();
+        start = scanner.next();
         System.out.println("\n\nPlease enter the coefficient for this substance now.\n");
-        sub1coe = scanner.nextDouble();
+        startcoe = scanner.nextDouble();
         System.out.println("\n\nFinally, enter the number of moles.\n");
-        sub1mol = scanner.nextDouble();
+        startmol = scanner.nextDouble();
         System.out.println("\n\nNow enter the name of the substance you are GETTING TO.\n");
-        sub2 = scanner.next();
+        end = scanner.next();
         System.out.println("\n\nPlease enter the coefficient for this substance now.\n");
-        sub2coe = scanner.nextDouble();
-        sub2mol = (sub1mol * (sub2coe / sub1coe));
-        System.out.println("\n\n" + sub1mol + " mole(s) of " + sub1 + " corresponds to " + sub2mol + " mole(s) of " + sub2 + ".\n");
+        endcoe = scanner.nextDouble();
+        endmol = (startmol * (endcoe / startcoe));
+        System.out.println("\n\n" + startmol + " mole(s) of " + start + " corresponds to " + endmol + " mole(s) of " + end + ".\n");
     }
 }
