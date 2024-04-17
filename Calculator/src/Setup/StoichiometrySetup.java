@@ -7,11 +7,13 @@ public class StoichiometrySetup extends Universal {
     public int type;
     public int order;
     // Variables for Substance 1
-    public String sub1;
-    public double sub1coe;
-    public double sub1mol;
+    public String start;
+    public double startcoe;
+    public double startmol;
+    public double startparts;
     // Variables for Substance 2
-    public String sub2;
-    public double sub2coe;
-    public double sub2mol;
+    public String end;
+    public double endcoe;
+    public double endmol;
+    public double endparts;
 }
