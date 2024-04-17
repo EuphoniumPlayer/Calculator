@@ -4,8 +4,8 @@ import Tools.Universal;
 
 public class StoichiometrySetup extends Universal {
     public boolean forgive2 = true;
-    public double type;
-    public double order;
+    public int type;
+    public int order;
     // Variables for Substance 1
     public String start;
     public double startcoe;
