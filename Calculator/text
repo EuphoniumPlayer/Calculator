@@ -1,0 +1,3 @@
+this is a text file to keep potentially useful into. 
+On robotics computer, to run this program in terminal, use
+ & 'C:\Users\Public\wpilib\2024\jdk\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'C:\Users\FRC 8719\Documents\GitHub\Calculator\Calculator\bin' 'Initializer' 

@@ -9,7 +9,7 @@ public class StoichControl extends Universal {
     private static final StoichParts parts = new StoichParts();
 
     public void begin () {
-        System.out.println("\n\nAvalible Operations: \n\n1. Mole/Moles\n2.Mole/particles\n3. Mole/Mass\n4. Mass/Particles\n");
+        System.out.println("\n\nAvalible Operations: \n\n1. Mole/Moles\n2. Mole/particles\n3. Mole/Mass\n4. Mass/Particles\n");
         while (forgive) {
             select = scanner.nextInt();
             switch (select) {
