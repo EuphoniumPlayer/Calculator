@@ -19,31 +19,31 @@ public class StoichParts extends StoichiometrySetup{
                             case 1:
                                 // starting substance in particles, going to moles
                                 forgive2 = false;
-                                System.out.println("\n\nHow many particles of the substance are there (enter the number in standard form, scientific form\ndoes not work)?");
+                                System.out.println("\nHow many particles of the substance are there (enter the number in standard form, scientific form\ndoes not work)?");
                                 startparts = scanner.nextDouble();
-                                System.out.println("\n\nEnter the coefficent of the first substance, followed by the second substance's coefficient.\n");
+                                System.out.println("\nEnter the coefficent of the first substance, followed by the second substance's coefficient.\n");
                                 startcoe = scanner.nextDouble();
                                 endcoe = scanner.nextDouble();
                                 startmol = (startparts / particles);
                                 endmol = (startmol * (endcoe / startcoe));
-                                System.out.println("\n\n" + endmol + " moles");
+                                System.out.println("\n" + endmol + " moles");
                                 break;
                             case 2: 
                                 // starting substance in moles, going to particles
                                 forgive2 = false;
-                                System.out.println("\n\nHow many moles of the substance are there?\n");
+                                System.out.println("\nHow many moles of the substance are there?\n");
                                 startmol = scanner.nextDouble();
-                                System.out.println("\n\nEnter the coefficent of the first substance, followed by the second substance's coefficent.\n");
+                                System.out.println("\nEnter the coefficent of the first substance, followed by the second substance's coefficent.\n");
                                 startcoe = scanner.nextDouble();
                                 endcoe = scanner.nextDouble();
                                 endmol = (startmol * (endcoe / startcoe));
                                 endparts = (endmol * particles);
-                                System.out.println("\n\n" + endparts + " particles");
+                                System.out.println("\n" + endparts + " particles");
                                 break;
                             default:
                                 // invalid
                                 forgive2 = true;
-                                System.out.println("\n\nInvalid\n");
+                                System.out.println("\nInvalid\n");
                                 break;
                         }
                     }
@@ -51,20 +51,20 @@ public class StoichParts extends StoichiometrySetup{
                 case 2:
                     // particles to particles
                     forgive = false;
-                    System.out.println("\n\nEnter the coefficent of the starting substance, and then the number of particles written in standard form (scientific\nform does NOT work)\n");
+                    System.out.println("\nEnter the coefficent of the starting substance, and then the number of particles written in standard form (scientific\nform does NOT work)\n");
                     startcoe = scanner.nextDouble();
                     startparts = scanner.nextDouble();
-                    System.out.println("\n\nNow the coefficent of the ending substance.\n");
+                    System.out.println("\nNow the coefficent of the ending substance.\n");
                     endcoe = scanner.nextDouble();
                     startmol = (startparts / particles);
                     endmol = (startmol * (endcoe / startcoe));
                     endparts = (endmol * particles);
-                    System.out.println("\n\n~ " + endparts + " particles\n");
+                    System.out.println("\n~ " + endparts + " particles\n");
                     break;
                 default:
                     // invalid
                     forgive = true;
-                    System.out.println("\n\nInvalid\n");
+                    System.out.println("\nInvalid\n");
                     break;
             }
         }

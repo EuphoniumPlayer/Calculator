@@ -11,9 +11,13 @@ public class StoichiometrySetup extends Universal {
     public double startcoe;
     public double startmol;
     public double startparts;
+    public double startmass;
+    public double startmm;
     // Variables for Substance 2
     public String end;
     public double endcoe;
     public double endmol;
     public double endparts;
+    public double endmass;
+    public double endmm;
 }
